@@ -1,0 +1,180 @@
+html,
+
+:root {
+	--main-bg-color: #D7D7D7;
+}
+
+@@font-face {
+  font-family: Calibri, Candara, Segoe, Optima, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  padding:0;
+  margin:0;
+  width:100%;
+  font-family: 'Calibri';
+  background: white;
+
+}
+
+header{
+  float:left;
+  width:100%;
+  background:#000000;
+  color:#ffffff;
+  height:8vh;
+  text-align: center;
+
+ }
+
+.container{
+  width:90%;
+  margin:auto;
+  overflow:hidden;
+}
+
+
+.grid-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1.5fr 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 0.4fr 1.5fr 1.2fr 0.4fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-areas: "panel panel summary-div summary-div summary-div summary-div" "panel panel filter-div filter-div filter-div filter-div" "panel panel graph1 graph1 graph1 graph1" "graph2 graph2 graph2 graph3 graph3 graph3" "graph2 graph2 graph2 graph3 graph3 graph3";
+}
+
+.simple-grid {
+	margin-top: 40px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-column-gap: 15px;
+	gird-template-areas: "graph_A graph_B"
+}
+
+.graph_A { grid-area: graph_A; }
+
+.graph_B { grid-area: graph_B; }
+
+.panel { grid-area: panel;
+	border-radius: 6px;
+	background-color: #EFEFEF
+}
+
+.panel p {
+	font-weight:bold;
+}
+
+.filter-div p {
+	font-weight:bold;
+}
+
+.panel > * {
+margin-left: 10px;
+margin-right: 10px;
+
+}
+
+.summary-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "panel1 panel2 panel3 panel4";
+  grid-area: summary-div;
+}
+
+.summary-div div{
+	background-color: #EFEFEF;
+	margin-left:8px;
+	margin-right:8px;
+	border-radius: 6px;
+	position:relative;
+	text-align: center;
+}
+
+.filter-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "filter1 filter2";
+  grid-area: filter-div;
+}
+
+.filter-div div{
+	
+	margin-left:8px;
+	margin-right:8px;
+	text-align: center;
+}
+
+
+.panel1 { grid-area: panel1; }
+
+.panel2 { grid-area: panel2; }
+
+.panel3 { grid-area: panel3; }
+
+.panel4 { grid-area: panel4; }
+
+.graph1 { grid-area: graph1; }
+
+.graph2 { grid-area: graph2; }
+
+.graph3 { grid-area: graph3; }
+
+.filter1 { grid-area: filter1; }
+
+.filter2 { grid-area: filter2; }
+
+.panel-value {
+	display: inline-block;
+	padding-top:20px;
+}
+
+.description {
+	position:absolute;
+    bottom:0;
+	padding-left: 12px;
+}
+
+.markdown-area {
+	width: 70%;
+	margin: 0 auto;
+	text-align: justify;
+}
+
+#button {
+	margin: 0 auto;
+	display: block;
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+	
+}
+
+#button:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+}
+
+.output-score {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-weight: bold;
+	text-align: center;
+	
+}
